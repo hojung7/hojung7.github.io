@@ -9825,3 +9825,140 @@ div img:hover {
   height: 100px;
   all: unset;
 }
+
+/* 모달 */
+/* 모달 기본 스타일 */
+.modal {
+  display: none; /* 기본적으로 숨김 */
+  position: fixed;
+  z-index: 1; /* 화면 앞에 표시 */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4); /* 배경 색상 */
+}
+
+/* 모달 내용 스타일 */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 50px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 1000px;
+
+}
+
+/* 닫기 버튼 */
+.close {
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+#detailsModal h2{
+  font-size: 2em;
+  font-weight: bold;
+  caret-color: rgb(55, 53, 47);
+  margin-bottom: 50px;
+}
+
+#detailsModal i{
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+#detailsModal span{
+  font-size: 15px;
+
+}
+
+.skills-modal{
+  display: flex;
+  align-items: center;
+}
+.skills-modal li{
+  border: 1px solid #f7788a;
+  border-radius: 1rem;
+  margin-right: .5rem;
+  color: #f7788a;
+  width: 50px;
+  text-align: center;
+}
+.skills-modal ul{
+  display: flex;
+  list-style-type: none; /* 점 제거 */
+}
+
+.info-container{
+  display: flex;
+  align-items: baseline;
+}
+
+.modal-content p {
+  margin-left: 40px;
+  color: black;
+}
+
+#detailsModal h6,i{
+  color: black;
+  font-size: 16px;
+  font-weight: 600;
+}
+#detailsModal p{
+  font-size: 16px;
+  color: black;
+}
+.stack-modal ul{
+  color: black;
+}
+
+.modal-content h5{
+  margin-top: 20px;
+  font-weight: 800;
+}
+.content-modal p{
+  margin-left: 2px;
+  color: black;
+}
+
+.content-modal li{
+  color: black;
+  font-weight: 800;
+}
+
+.image-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(48%, 1fr)); /* 최소 48% 너비로 두 개씩 배치 */
+  gap: 20px; /* 이미지 간격 */
+}
+
+.image-group div {
+  text-align: center; /* 텍스트 가운데 정렬 */
+  margin-bottom: 5px; /* 텍스트와 이미지 간 간격 */
+}
+
+.image-group img {
+  width: 100%; /* 각 그리드 칸에 맞게 이미지 크기 조정 */
+  border-radius: 8px; /* 이미지 모서리 둥글게 */
+  cursor: pointer; /* 클릭 가능 표시 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* 약간의 그림자 */
+}
+
+#sending{
+  width: 200px;
+}
+
