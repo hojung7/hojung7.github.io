@@ -9673,52 +9673,6 @@ textarea.form-control {
     stroke-dashoffset: -136px; } }
 
 
-#page-2 h3{
-  text-align: center;
-  color: black;
-  font-size: 2.0rem;
-  margin-bottom: 1.5rem;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  margin-bottom: 50px;
-}
-
-
-.img-group {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin: 20px 0;
-}
-
-.img-group img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.img-group img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
-#skills-img img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-div img:hover {
-  transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-}
-
 /* 임시 */
 .skills-container {
   display: flex;
@@ -9746,79 +9700,8 @@ div img:hover {
 .server .skills-grid{
   display: flex;
   justify-content: center;
-}
+} */
 
-
-/* Skills Section Container */
-
-
-.skills-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2rem;
-  margin-bottom: 3rem;
-}
-
-.frontend, .backend, .server {
-  background: #ffffff;
-  border-radius: 12px;
-  padding: 2rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.frontend:hover, .backend:hover, .server:hover {
-  transform: translateY(-5px);
-}
-
-.frontend h3, .backend h3, .server h3 {
-  font-size: 1.5rem;
-  color: #333;
-  text-align: center;
-  margin-bottom: 1.5rem;
-  font-weight: 600;
-}
-
-.skills-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 1.5rem;
-  justify-items: center;
-  align-items: center;
-}
-
-.skills-grid img {
-  width: 120px;
-  height: 120px;
-  border-radius: 10px;
-  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skills-grid img:hover {
-  transform: scale(1.1);
-}
-
-.server {
-  grid-column: 1 / -1;
-  margin-top: 2rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-container {
-      grid-template-columns: 1fr;
-  }
-
-  .skills-grid {
-      grid-template-columns: repeat(2, 1fr);
-  }
-
-  .skills-grid img {
-      width: 120px;
-      height: 120px;
-  }
-}
 
 #image-ph{
   width: 140px;
@@ -9962,3 +9845,88 @@ div img:hover {
   width: 200px;
 }
 
+/* 전체 페이지 컨테이너 */
+
+
+/* 섹션 제목 */
+.heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #111827;
+  margin-bottom: 2rem;
+}
+
+/* 스킬 컨테이너 */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* 섹션 공통 스타일 */
+.frontend, .backend, .server {
+  flex: 1;
+  min-width: 300px;
+}
+
+/* 섹션 제목 */
+h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+/* 스킬 그리드 */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+}
+
+/* 스킬 카드 */
+.skills-grid img {
+  display: block;
+  width: 100%;
+  max-width: 100px;
+  height: 100px;
+  object-fit: contain;
+  padding: 1rem;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.skills-grid img:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* DB&Server 섹션 */
+.server {
+  margin-top: 2rem;
+}
+
+.server .skills-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .frontend, .backend, .server {
+    width: 100%;
+  }
+}
